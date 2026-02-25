@@ -1,0 +1,993 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<title>Swaminarayan University | Home</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+}
+
+/* ---------------- NAVBAR ---------------- */
+nav {
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5%;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.logo img {
+    height: 90px;
+    width: 260px;
+}
+
+nav ul {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #475569;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #0b2d5c;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+}
+
+.menu-link {
+    text-decoration: none;
+    color: #1e293b;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: 0.3s;
+}
+
+.menu-text {
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: -5px;
+}
+
+.menu-icon {
+    font-size: 30px;
+}
+
+.menu-link:hover {
+    color: #f59e0b;
+    transform: translateY(-2px);
+}
+
+/* ---------------- TITLE SECTION ---------------- */
+
+.MAIN {
+    padding: 40px 5%;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.MAIN h1 {
+    font-size: 32px;
+    color: #fc7d06;
+    margin-bottom: 20px;
+}
+
+/* ---------------- HERO IMAGE ---------------- */
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ================= ABOUT ENGINEERING SECTION ================= */
+
+.about-engineering {
+    padding: 80px 5%;
+    background: #ffffff;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text h2 {
+    font-size: 32px;
+    color: #0b2d5c;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.about-text h2::after {
+    content: "";
+    width: 70px;
+    height: 4px;
+    background: #f59e0b;
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+}
+
+.about-text p {
+    font-size: 17px;
+    line-height: 1.8;
+    color: #475569;
+    margin-bottom: 15px;
+}
+
+/* VIDEO BOX */
+
+.about-video {
+    flex: 1;
+}
+
+.video-box {
+    position: relative;
+    border-radius: 30px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    transition: 0.4s ease;
+}
+
+.video-box:hover {
+    transform: translateY(-8px);
+}
+
+.video-box img {
+    width: 100%;
+    display: block;
+    border-radius: 30px;
+    filter: brightness(70%);
+}
+
+.play-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90px;
+    height: 90px;
+    background: #f59e0b;
+    color: white;
+    font-size: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    transition: 0.3s;
+}
+
+.play-btn:hover {
+    background: #0b2d5c;
+}
+
+/* ================= WHY ENGINEERING SECTION ================= */
+
+.why-engineering {
+    background: linear-gradient(135deg, #0b2d5c, #0a2a55);
+    position: relative;
+    overflow: hidden;
+    padding: 80px 5%;
+}
+
+.why-container {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+.why-image {
+    flex: 1;
+    padding: 30px;
+}
+
+.why-image img {
+    width: 100%;
+    border-radius: 60px 200px 60px 200px;
+    border: 8px solid #f59e0b;
+}
+
+.why-content {
+    flex: 1;
+}
+
+.why-content h2 {
+    color: #f59e0b;
+    font-size: 32px;
+    margin-bottom: 25px;
+}
+
+.why-content p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #e2e8f0;
+}
+/* ================= COURSE SLIDER SECTION ================= */
+
+/* ================= PREMIUM VERTICAL COURSE SECTION ================= */
+
+.courses-section {
+    padding: 100px 8%;
+    background: #fcfbf9;
+}
+
+.courses-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.courses-header h2 {
+    font-size: 34px;
+    color: #0b2d5c;
+    letter-spacing: 2px;
+}
+
+.courses-header p {
+    max-width: 750px;
+    margin: 15px auto 0;
+    color: #555;
+    line-height: 1.7;
+}
+
+/* VERTICAL GRID */
+
+.courses-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+/* CARD DESIGN */
+
+.course-card {
+    position: relative;
+    background: #f6e7e7;
+    border-left: 6px solid #f59e0b;
+    border-radius: 12px;
+    padding: 2px 10px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    transition: 0.3s ease;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.course-card:hover {
+    transform: translateX(8px);
+    border-left: 6px solid #0b2d5c;
+}
+
+/* TOP HEADER */
+
+.course-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.course-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.course-icon {
+    font-size: 32px;
+    color: #0b2d5c;
+    min-width: 45px;
+}
+
+.course-card h3 {
+    font-size: 18px;
+    color: #0b2d5c;
+}
+
+.arrow {
+    font-size: 18px;
+}
+
+/* DESCRIPTION (HIDDEN DEFAULT) */
+
+.course-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.4s ease;
+}
+
+.course-content p {
+    margin-top: 15px;
+    color: #555;
+    line-height: 1.7;
+}
+
+/* ACTIVE STATE */
+
+.course-card.active .course-content {
+    max-height: 300px;
+}
+
+.course-card.active .arrow {
+    transform: rotate(180deg);
+}
+
+/* ================= PROFESSIONAL COURSE SLIDER ================= */
+
+/* ================= ULTRA PREMIUM COURSE SECTION ================= */
+
+.master-section {
+    width: 100%;
+    padding: 120px 0;
+    background: linear-gradient(135deg, #0b2d5c, #091f3f);
+    position: relative;
+    overflow: hidden;
+}
+
+.master-section::before {
+    content: "";
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    background: rgba(245,158,11,0.15);
+    border-radius: 50%;
+    top: -200px;
+    right: -200px;
+    filter: blur(120px);
+}
+
+.master-wrapper {
+    width: 100%;
+    padding: 0 40px;
+    overflow: hidden;
+    position: relative;
+}
+
+/* SLIDER */
+.master-slider {
+    display: flex;
+    gap: 30px;
+    transition: transform 0.6s ease;
+}
+
+/* CARD */
+.master-card {
+    flex: 0 0 calc((100% - 90px) / 4);
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(12px);
+    border-radius: 25px;
+    padding: 35px 28px;
+    min-height: 340px;
+    color: #fff;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.25);
+    transition: 0.4s ease;
+    border: 1px solid rgba(255,255,255,0.15);
+}
+
+.master-card:hover {
+    transform: translateY(-15px) scale(1.03);
+    box-shadow: 0 30px 80px rgba(0,0,0,0.4);
+    background: rgba(255,255,255,0.15);
+}
+
+/* ICON */
+.master-icon {
+    font-size: 45px;
+    color: #f59e0b;
+    margin-bottom: 20px;
+}
+
+/* TITLE */
+.master-card h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+/* DESCRIPTION */
+.master-card p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #e2e8f0;
+}
+
+/* BUTTON */
+.master-card a {
+    display: inline-block;
+    margin-top: 18px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #f59e0b;
+    text-decoration: none;
+}
+
+.master-card a:hover {
+    color: #ffffff;
+}
+
+/* ARROWS */
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    border: none;
+    background: #f59e0b;
+    color: #fff;
+    font-size: 22px;
+    cursor: pointer;
+    z-index: 10;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    transition: 0.3s;
+}
+
+.slider-btn:hover {
+    background: #ffffff;
+    color: #0b2d5c;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+/* RESPONSIVE */
+@media(max-width:1200px){
+    .master-card { flex: 0 0 calc((100% - 60px) / 3); }
+}
+@media(max-width:900px){
+    .master-card { flex: 0 0 calc((100% - 30px) / 2); }
+}
+@media(max-width:600px){
+    .master-card { flex: 0 0 100%; }
+}
+/* ================= FOOTER ================= */
+
+.university-footer {
+    background: #0b2d5c;
+    color: white;
+    padding: 60px 5% 20px;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+}
+
+.footer-logo {
+    width: 220px;
+    margin-bottom: 20px;
+}
+
+.footer-col h3 {
+    margin-bottom: 20px;
+    font-size: 20px;
+    position: relative;
+}
+
+.footer-col h3::after {
+    content: '';
+    width: 50px;
+    height: 3px;
+    background: orange;
+    display: block;
+    margin-top: 8px;
+}
+
+.footer-col ul {
+    list-style: none;
+}
+
+.footer-col ul li {
+    margin-bottom: 12px;
+}
+
+.footer-col ul li a {
+    text-decoration: none;
+    color: #d1d5db;
+    transition: 0.3s;
+}
+
+.footer-col ul li a:hover {
+    color: orange;
+    padding-left: 5px;
+}
+
+.contact-item {
+    margin-bottom: 15px;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.qr-code {
+    width: 180px;
+    border: 5px solid #1e3a8a;
+    border-radius: 15px;
+    margin-top: 15px;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 40px;
+    border-top: 1px solid rgba(255,255,255,0.2);
+    padding-top: 15px;
+    font-size: 14px;
+    color: #cbd5e1;
+}
+/* ---------------- RESPONSIVE ---------------- */
+
+@media (max-width: 900px) {
+    .about-container,
+    .why-container {
+        flex-direction: column;
+    }
+
+    nav ul {
+        display: none;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+    <div class="logo">
+        <img src="university.png" alt="University Logo">
+    </div>
+
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Academics</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Kalol</a></li>
+    </ul>
+
+    <div class="nav-right">
+        <a href="dashboard.html" class="menu-link">
+            <span class="menu-text">Menu</span>
+            <span class="menu-icon">&#9776;</span>
+        </a>
+    </div>
+</nav>
+
+<main>
+
+    <!-- TITLE -->
+    <div class="MAIN">
+        <h1>Swaminarayan College of Engineering and Technology</h1>
+    </div>
+
+    <!-- HERO IMAGE -->
+    <div class="hero-image">
+        <img src="eng1.jpg" alt="Engineering College">
+    </div>
+
+    <!-- ABOUT ENGINEERING -->
+    <section class="about-engineering">
+        <div class="about-container">
+
+            <div class="about-text">
+                <h2>ABOUT ENGINEERING</h2>
+                <p>The Faculty of Engineering at Swaminarayan University, Kalol, is committed to producing technically skilled, industry-ready engineers through a curriculum built on practical application, industry interface, and innovation. From Diploma to Postgraduate programs, the faculty ensures that students gain the skills, tools, and mindset required to thrive in real-world engineering environments.</p>
+                <p> Our engineering programs provide hands -on training in modern laboratories, workshops and field projects. Students also master the core theoretical concepts, but also technical problems-composition, CAD/CAM software, electrical systems, coding and infrastructure design. </p>
+                <p>Project-based learning, internship, industrial search and technical training on the site is an important part of the academic process, which ensures student educators with job-taire skills.</p>
+                <p> Students associate with financial equipment, commercial software, digital platforms and entrepreneurial thinking that match modern requirements for industry and trade.
+                   Courses are taught by experienced faculty and industry experts, with new technologies, stability and focus on smart engineering solutions.</p>
+            </div>
+
+            <div class="about-video">
+                <div class="video-box" onclick="openVideo()">
+                    <img src="eng1.jpg" alt="University Campus">
+                    <div class="play-btn">▶</div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- WHY ENGINEERING -->
+    <section class="why-engineering">
+        <div class="why-container">
+
+            <div class="why-image">
+                <img src="eng2.jpg" alt="Engineering Students">
+            </div>
+
+            <div class="why-content">
+                <h2>WHY SHOULD YOU CHOOSE ENGINEERING?</h2>
+                <p>Engineering is the basis for technological innovation and development of infrastructure in all fields.</p>
+                <p>Our programs focus on preparing engineers who can solve real industrial problems with practical knowledge and equipment.
+                   Students are trained for careers in production, IT, construction, transport, energy, automation, design and counseling.</p>
+                <p>AI, IoT, green energy and robotics demand and developing technologies with high industrial requirements -Engineering provides exciting, lifetime learning and growth.</p>
+            </div>
+
+        </div>
+    </section>
+ 
+   <!-- ================= COURSE DETAILS SECTION ================= -->
+
+<section class="courses-section">
+
+    <div class="courses-header">
+        <h2>COURSES DETAILS</h2>
+        <p>
+            Swaminarayan University offers advanced, industry-oriented and 
+            student-friendly programs designed to develop skilled engineers 
+            and technology leaders for the future.
+        </p>
+    </div>
+
+    <div class="courses-grid">
+
+        <!-- DEGREE PROGRAMS -->
+         <section class="master-section">
+
+    <div class="master-wrapper">
+
+        <!-- LEFT BUTTON -->
+        <button class="slider-btn prev" id="prevBtn">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+
+        <!-- RIGHT BUTTON -->
+        <button class="slider-btn next" id="nextBtn">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+
+        <div class="master-slider" id="masterSlider">
+         <!-- CARD 1 -->
+            <div class="master-card">
+                <div class="master-icon">
+                   <i class="fas fa-car"></i>
+                </div>
+                <h3>B.E. in Automobile Engineering</h3>
+                <p>
+                    Focuses on vehicle design, automotive systems, engine technology, 
+                and modern transportation innovations aligned with industry standards.
+                </p>
+                <a href="#">READ MORE →</a>
+            </div>
+             <!-- CARD 2 -->
+            <div class="master-card">
+                <div class="master-icon">
+                   <i class="fas fa-building"></i>
+                </div>
+                <h3>B.E. in Civil Engineering</h3>
+                <p>
+                   Covers infrastructure development, structural engineering, 
+                construction management, and sustainable urban planning.
+                </p>
+                <a href="#">READ MORE →</a>
+            </div>
+               <!-- CARD 3 -->
+            <div class="master-card">
+                <div class="master-icon">
+                   <i class="fas fa-laptop-code"></i>
+                </div>
+                <h3>B.E. in Computer Engineering</h3>
+                <p>
+                   Emphasizes software development, artificial intelligence, 
+                cybersecurity, and advanced computing technologies.
+                </p>
+                <a href="#">READ MORE →</a>
+            </div>
+             <!-- CARD 4 -->
+            <div class="master-card">
+                <div class="master-icon">
+                  <i class="fas fa-bolt"></i>
+                </div>
+                <h3>B.E. in Electrical Engineering</h3>
+                <p>
+                  Specializes in power systems, renewable energy, electrical machines, 
+                and smart grid technologies.
+                </p>
+                <a href="#">READ MORE →</a>
+            </div>
+            <!-- CARD 5 -->
+            <div class="master-card">
+                <div class="master-icon">
+                   <i class="fas fa-network-wired"></i>
+                </div>
+                <h3>B.E. in Information Technology</h3>
+                <p>
+                    Focuses on data management, networking, cloud computing, 
+                and modern IT infrastructure solutions.
+                </p>
+                <a href="#">READ MORE →</a>
+            </div>
+             <!-- CARD 6 -->
+            <div class="master-card">
+                <div class="master-icon">
+                   <i class="fas fa-cogs"></i>
+                </div>
+                <h3>B.E. in Mechanical Engineering</h3>
+                <p>
+                   Provides strong foundations in machine design, manufacturing, 
+                thermodynamics, and CAD/CAM technologies.
+                </p>
+                <a href="#">READ MORE →</a>
+            </div>
+            
+        <!-- DIPLOMA PROGRAMS -->
+         <!-- CARD 7 -->
+            <div class="master-card">
+                <div class="master-icon">
+                  <i class="fas fa-car"></i>
+                </div>
+                <h3>Diploma in Automobile Engineering</h3>
+                <p>
+                    Practical-oriented program focusing on automotive systems, 
+                vehicle maintenance, and workshop technologies.
+                </p>
+                <a href="#">READ MORE →</a>
+            </div>
+             <!-- CARD 8 -->
+            <div class="master-card">
+                <div class="master-icon">
+                    <i class="fas fa-building"></i>
+                </div>
+                <h3>Diploma in Civil Engineering</h3>
+                <p>
+                    Provides hands-on training in construction techniques, 
+                surveying, and infrastructure project execution. technologies.
+                </p>
+                <a href="#">READ MORE →</a>
+            </div>
+
+              <!-- CARD 9 -->
+            <div class="master-card">
+                <div class="master-icon">
+                   <i class="fas fa-laptop-code"></i>
+                </div>
+                <h3>Diploma in Computer Engineering</h3>
+                <p>
+                    Covers programming fundamentals, database systems, 
+                networking, and software application development.oject execution. technologies.
+                </p>
+                <a href="#">READ MORE →</a>
+            </div>
+              <!-- CARD 10 -->
+            <div class="master-card">
+                <div class="master-icon">
+                  <i class="fas fa-bolt"></i>
+                </div>
+                <h3>Diploma in Electrical Engineering</h3>
+                <p>
+                     Focuses on electrical installations, industrial automation, 
+                and power distribution systems.
+                </p>
+                <a href="#">READ MORE →</a>
+            </div>
+          <!-- CARD 11 -->
+            <div class="master-card">
+                <div class="master-icon">
+                    <i class="fas fa-network-wired"></i>
+                </div>
+                <h3>Diploma in Information Technology</h3>
+                <p>
+                     Develops foundational IT knowledge including system support, 
+                networking, web technologies, and cybersecurity basics.
+                </p>
+                <a href="#">READ MORE →</a>
+            </div>
+             <!-- CARD 12 -->
+            <div class="master-card">
+                <div class="master-icon">
+                   <i class="fas fa-cogs"></i>
+                </div>
+                <h3>Diploma in Mechanical Engineering</h3>
+                <p>
+                   Provides technical skills in manufacturing processes, 
+                machine tools, and mechanical system maintenance.
+                </p>
+                <a href="#">READ MORE →</a>
+            </div>
+
+        <!-- MASTER PROGRAMS -->
+
+            <!-- CARD 13 -->
+            <div class="master-card">
+                <div class="master-icon">
+                 <i class="fas fa-city"></i>
+                </div>
+                <h3>Master in Civil Engineering</h3>
+                <p>
+                    Designed to address India's infrastructure growth,
+                    smart city development, and advanced structural challenges.
+                </p>
+                <a href="#">READ MORE →</a>
+            </div>
+
+            <!-- CARD 14 -->
+            <div class="master-card">
+                <div class="master-icon">
+                  <i class="fas fa-microchip"></i>
+                </div>
+                <h3>Master of Engineering in Computer</h3>
+                <p>
+                    Focuses on AI, data science, cybersecurity,
+                    and modern computing research technologies.
+                </p>
+                <a href="#">READ MORE →</a>
+            </div>
+
+            <!-- CARD 15 -->
+            <div class="master-card">
+                <div class="master-icon">
+                    <i class="fas fa-industry"></i>
+                </div>
+                <h3>Master of Engineering in Mechanical (CAD/CAM)</h3>
+                <p>
+                    Specialized in advanced design engineering,
+                    automation systems and production technologies.
+                </p>
+                <a href="#">READ MORE →</a>
+            </div>
+
+            <!-- CARD 16 -->
+            <div class="master-card">
+                <div class="master-icon">
+                   <i class="fas fa-charging-station"></i>
+                </div>
+                <h3>Master of Engineering in Electrical</h3>
+                <p>
+                    Advanced power systems, renewable energy,
+                    smart grids and industrial electrical solutions.
+                </p>
+                <a href="#">READ MORE →</a>
+            </div>
+
+        </div>
+
+    </div>
+    </div>
+
+</section>
+</main>
+
+<!-- FOOTER -->
+<footer class="university-footer">
+
+    <div class="footer-container">
+
+        <!-- COLUMN 1 : LOGO + CONTACT -->
+        <div class="footer-col">
+            <img src="university.png" class="footer-logo" alt="University Logo">
+
+            <div class="contact-item">
+                📞 +91-63576 75561/2/3,18002037800
+            </div>
+
+            <div class="contact-item">
+                📍 Shree Swaminarayan Vishwamangal Gurukul,<br>
+                Ahmedabad-Mehsana Highway, At & Po-Saij,<br>
+                Kalol, Dist. Gandhinagar - 382725, Gujarat
+            </div>
+
+            <div class="contact-item">
+                ✉ info@swaminarayanuniversity.ac.in
+            </div>
+        </div>
+
+        <!-- COLUMN 2 : QUICK LINKS -->
+        <div class="footer-col">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">FAQ's</a></li>
+                <li><a href="#">Testimonials</a></li>
+                <li><a href="#">Terms Of Service</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Update News</a></li>
+            </ul>
+        </div>
+
+        <!-- COLUMN 3 : CAMPUS -->
+        <div class="footer-col">
+            <h3>Our Campus</h3>
+            <ul>
+                <li><a href="#">Campus Safety</a></li>
+                <li><a href="#">Student Activities</a></li>
+                <li><a href="#">Academic Department</a></li>
+                <li><a href="#">Planning & Administration</a></li>
+                <li><a href="#">Office Of The Chancellor</a></li>
+                <li><a href="#">Facility Services</a></li>
+            </ul>
+        </div>
+
+        <!-- COLUMN 4 : ADMISSION -->
+        <div class="footer-col">
+            <h3>Admission Enquiry</h3>
+            <p>Scan the QR Code for Admission Enquiry</p>
+            <img src="qr.png" class="qr-code" alt="QR Code">
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        © 2026 Swaminarayan University | All Rights Reserved.
+    </div>
+
+</footer>
+<script>
+function openVideo() {
+    window.open("https://www.youtube.com/", "_blank");
+}
+
+const slider = document.getElementById("masterSlider");
+const nextBtn = document.getElementById("nextBtn");
+const prevBtn = document.getElementById("prevBtn");
+
+let currentIndex = 0;
+
+function getCardsPerView() {
+    if (window.innerWidth < 600) return 1;
+    if (window.innerWidth < 900) return 2;
+    if (window.innerWidth < 1200) return 3;
+    return 4;
+}
+
+function updateSlider() {
+    const cardWidth = slider.children[0].offsetWidth + 25;
+    slider.style.transform =
+        `translateX(-${currentIndex * cardWidth}px)`;
+}
+
+nextBtn.addEventListener("click", () => {
+    const cardsPerView = getCardsPerView();
+    const maxIndex = slider.children.length - cardsPerView;
+
+    if (currentIndex < maxIndex) {
+        currentIndex++;
+        updateSlider();
+    }
+});
+
+prevBtn.addEventListener("click", () => {
+    if (currentIndex > 0) {
+        currentIndex--;
+        updateSlider();
+    }
+});
+
+window.addEventListener("resize", () => {
+    currentIndex = 0;
+    updateSlider();
+});
+</script>
+</body>
+</html>

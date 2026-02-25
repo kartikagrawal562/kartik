@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>University Dashboard | Swaminarayan University</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ---------------- BODY ---------------- */
+
+body {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    background: #f8f9fb;
+    color: #1e293b;
+    min-height: 100vh;
+    padding: 40px 20px;
+}
+
+/* ---------------- CLOSE BUTTON ---------------- */
+
+.closebtn {
+    position: fixed;
+    top: 30px;
+    right: 40px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 16px;
+    font-family: 'Georgia', serif;
+    color: #0a1f44;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.close-icon {
+    font-size: 28px;
+    line-height: 1;
+}
+
+.closebtn:hover {
+    color: #b91c1c;
+}
+
+.closebtn:hover .close-icon {
+    transform: rotate(90deg);
+    transition: 0.3s ease;
+}
+/* ---------------- HEADER LOGO ---------------- */
+
+.logo-container {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.logo-container img {
+    height: 110px;
+}
+
+/* ---------------- MAIN CONTAINER ---------------- */
+
+.dashboard-content {
+    max-width: 1400px;
+    margin: auto;
+    padding: 50px 60px;
+    background: #1e293b;;
+    border: 1px solid #e2e8f0;
+    border-top: 6px solid #0a1f44;
+}
+
+/* ---------------- GRID ---------------- */
+
+.mega-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+}
+
+/* ---------------- CATEGORY COLUMN ---------------- */
+
+.category-column h2 {
+    font-size: 1.05rem;
+    color: #f1f3f5;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 2px solid #fbbf24;
+    padding-bottom: 6px;
+}
+
+.category-column ul {
+    list-style: none;
+}
+
+.category-column ul li {
+    margin-bottom: 10px;
+}
+
+.category-column ul li a {
+    text-decoration: none;
+    color: #f1f2f3;
+    font-size: 0.95rem;
+    transition: 0.2s ease;
+}
+
+.category-column ul li a:hover {
+    color: #f6f8fa;
+    text-decoration: underline;
+}
+
+/* ---------------- RESPONSIVE ---------------- */
+
+@media (max-width: 1000px) {
+    .mega-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .mega-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard-content {
+        padding: 30px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<a href="javascript:void(0)" class="closebtn" onclick="slowClose()">
+    <span class="close-icon">&times;</span>
+    <span class="close-text">Close</span>
+</a>
+
+<div class="logo-container">
+    <img src="university.png" alt="University Logo">
+</div>
+
+<div class="dashboard-content">
+    <div class="mega-grid">
+
+        <div class="category-column">
+            <h2>About Us</h2>
+            <ul>
+                <li><a href="About_su.html">About SU</a></li>
+                <li><a href="Authorities_of_universities.html">Authorities of University</a></li>
+                <li><a href="All_committees.html">All Committees</a></li>
+                <li><a href="Recognitions&Approval.html">Recognitions & Approvals</a></li>
+                <li><a href="Awards&Achievements.html">Awards & Achievements</a></li>
+                <li><a href="Information_submitted_to_ugc.html">Information Submitted to UGC</a></li>
+                <li><a href="MoU(S).html">MoU(S)</a></li>
+            </ul>
+        </div>
+
+        <div class="category-column">
+            <h2>Constituent Institutes</h2>
+            <ul>
+                <li><a href="Faculty_of_engineering.html">Faculty of Engineering</a></li>
+                <li><a href="Faculty_of_professional_studies.html">Faculty of Professional Studies</a></li>
+                <li><a href="Faculty_of_Commerce_and_management.html">Faculty of Commerce & Management</a></li>
+                <li><a href="Faculty_of_arts&humanities.html">Faculty of Arts and Humanities</a></li>
+                <li><a href="Faculty_of_pysiotherapy.html">Faculty of Physiotherapy</a></li>
+                <li><a href="Faculty_of_education.html">Faculty of Education</a></li>
+                <li><a href="Faculty_of_IT&CS.html">Faculty of IT & Computer Science</a></li>
+                <li><a href="Faculty_of_Medicine.html">Faculty of Medicine</a></li>
+                <li><a href="Faculty_of_pharmacy.html">Faculty of Pharmacy</a></li>
+                <li><a href="Faculty_of_DoctoralStudies.html">Faculty of Doctoral Studies</a></li>
+                <li><a href="Faculty_of_homeopathy.html">Faculty of Homeopathy</a></li>
+                <li><a href="Faculty_of_Ayurveda.html">Faculty of Ayurveda</a></li>
+                <li><a href="Faculty_of_Nursing.html">Faculty of Nursing</a></li>
+                <li><a href="Faculty_of_science.html">Faculty of Science</a></li>
+                <li><a href="Faculty_of_law.html">Faculty of Law</a></li>
+                <li><a href="Faculty_of_PostDoctoral.html">Faculty of Post Doctoral</a></li>
+            </ul>
+        </div>
+
+        <div class="category-column">
+            <h2>Admissions</h2>
+            <ul>
+                <li><a href="How_to_apply.html">How To Apply</a></li>
+                <li><a href="Online_apllication_form.html">Online Application Form</a></li>
+                <li><a href="Information_booklet.html">Information Booklet</a></li>
+                <li><a href="Contact_admission_office.html">Contact Admission Office</a></li>
+                <li><a href="Career_guidelines.html">Career Guidelines</a></li>
+                <li><a href="Schloarship.html">Scholarship</a></li>
+            </ul>
+        </div>
+
+        <div class="category-column">
+            <h2>Life @ SU</h2>
+            <ul>
+                <li><a href="Why_su.html">Why SU</a></li>
+                <li><a href="Campus_tour.html">Campus Tour</a></li>
+                <li><a href="Events.html">Events</a></li>
+                <li><a href="Campus_facilities.html">Campus Facilities</a></li>
+            </ul>
+        </div>
+
+        <div class="category-column">
+            <h2>Student Section</h2>
+            <ul>
+                <li><a href="Academic_calender.html">Academic Calendars</a></li>
+                <li><a href="Student_portal.html">Student Portal</a></li>
+                <li><a href="Online_fee_payment.html">Online Fee Payment</a></li>
+                <li><a href="Downloads.html">Downloads</a></li>
+                <li><a href="Training&placements.html">Training & Placement</a></li>
+                <li><a href="Transfer_norms.html">Transfer Norms</a></li>
+            </ul>
+        </div>
+
+        <div class="category-column">
+            <h2>Examination</h2>
+            <ul>
+                <li><a href="CBCS_regulation.html">CBCS Regulation</a></li>
+                <li><a href="Examination_notification.html">Examination Notification</a></li>
+                <li><a href="View_results.html">View Results</a></li>
+                <li><a href="Exam_schedule.html">Exam Schedule</a></li>
+                <li><a href="Contact_us.html">Contact Us</a></li>
+            </ul>
+        </div>
+
+    </div>
+</div>
+
+<script>
+function slowClose() {
+    document.body.classList.add("closing");
+
+    setTimeout(function() {
+        window.location.href = "index.html";
+    }, 700);
+}
+</script>
+
+</body>
+</html>

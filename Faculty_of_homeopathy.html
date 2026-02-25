@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swaminarayan University | Home</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f2f5;
+            min-height: 100vh;
+        }
+
+        /* ---------------- NAVBAR ---------------- */
+        nav {
+            background: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 5%;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .logo img {
+            height: 90px;
+            width: 260px;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #475569;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #1e293b;
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+        }
+
+        .menu-link {
+            text-decoration: none;
+            color: #1e293b;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: 0.3s;
+        }
+
+        .menu-text {
+            font-size: 9px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin-bottom: -5px;
+        }
+
+        .menu-icon {
+            font-size: 30px;
+        }
+
+        .menu-link:hover {
+            color: #38bdf8;
+            transform: translateY(-2px);
+        }
+
+        /* ================= FOOTER STYLE ================= */
+
+.university-footer {
+    background: #0b2d5c;
+    color: white;
+    padding: 60px 5% 20px;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+}
+
+.footer-logo {
+    width: 220px;
+    margin-bottom: 20px;
+}
+
+.footer-col h3 {
+    margin-bottom: 20px;
+    font-size: 20px;
+    position: relative;
+}
+
+.footer-col h3::after {
+    content: '';
+    width: 50px;
+    height: 3px;
+    background: orange;
+    display: block;
+    margin-top: 8px;
+}
+
+.footer-col ul {
+    list-style: none;
+}
+
+.footer-col ul li {
+    margin-bottom: 12px;
+}
+
+.footer-col ul li a {
+    text-decoration: none;
+    color: #d1d5db;
+    transition: 0.3s;
+}
+
+.footer-col ul li a:hover {
+    color: orange;
+    padding-left: 5px;
+}
+
+.contact-item {
+    margin-bottom: 15px;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.qr-code {
+    width: 180px;
+    border: 5px solid #1e3a8a;
+    border-radius: 15px;
+    margin-top: 15px;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 40px;
+    border-top: 1px solid rgba(255,255,255,0.2);
+    padding-top: 15px;
+    font-size: 14px;
+    color: #cbd5e1;
+}
+
+        /* ---------------- RESPONSIVE ---------------- */
+
+        @media (max-width: 992px) {
+            .hero-section {
+                flex-wrap: wrap;
+                height: auto;
+            }
+
+            .hero-box {
+                width: 50%;
+                height: 300px;
+                border-right: none;
+                border-bottom: 2px solid white;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .hero-box {
+                width: 100%;
+                height: 250px;
+            }
+
+            nav ul {
+                display: none;
+            }
+        }
+          .MAIN {
+    padding: 40px 5%;
+    background-color: #ffffff;
+}
+
+.MAIN h1 {
+    font-size: 32px;
+    color: #fc7d06;
+    margin-bottom: 15px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav>
+        <div class="logo">
+            <img src="university.png" alt="University Logo">
+        </div>
+
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Academics</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Kalol</a></li>
+        </ul>
+
+        <div class="nav-right">
+            <a href="dashboard.html" class="menu-link">
+                <span class="menu-text">Menu</span>
+                <span class="menu-icon">&#9776;</span>
+            </a>
+        </div>
+    </nav>
+    <main>
+    <div class="MAIN">
+        <h1>Shree Swaminarayan Homeopathy College</h1>
+    </div>
+</main>
+      <!-- ================= FOOTER ================= -->
+<footer class="university-footer">
+
+    <div class="footer-container">
+
+        <!-- COLUMN 1 : LOGO + CONTACT -->
+        <div class="footer-col">
+            <img src="university.png" class="footer-logo" alt="University Logo">
+
+            <div class="contact-item">
+                📞 +91-63576 75561/2/3,18002037800
+            </div>
+
+            <div class="contact-item">
+                📍 Shree Swaminarayan Vishwamangal Gurukul,<br>
+                Ahmedabad-Mehsana Highway, At & Po-Saij,<br>
+                Kalol, Dist. Gandhinagar - 382725, Gujarat
+            </div>
+
+            <div class="contact-item">
+                ✉ info@swaminarayanuniversity.ac.in
+            </div>
+        </div>
+
+        <!-- COLUMN 2 : QUICK LINKS -->
+        <div class="footer-col">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">FAQ's</a></li>
+                <li><a href="#">Testimonials</a></li>
+                <li><a href="#">Terms Of Service</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Update News</a></li>
+            </ul>
+        </div>
+
+        <!-- COLUMN 3 : CAMPUS -->
+        <div class="footer-col">
+            <h3>Our Campus</h3>
+            <ul>
+                <li><a href="#">Campus Safety</a></li>
+                <li><a href="#">Student Activities</a></li>
+                <li><a href="#">Academic Department</a></li>
+                <li><a href="#">Planning & Administration</a></li>
+                <li><a href="#">Office Of The Chancellor</a></li>
+                <li><a href="#">Facility Services</a></li>
+            </ul>
+        </div>
+
+        <!-- COLUMN 4 : ADMISSION -->
+        <div class="footer-col">
+            <h3>Admission Enquiry</h3>
+            <p>Scan the QR Code for Admission Enquiry</p>
+            <img src="qr.png" class="qr-code" alt="QR Code">
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        © 2026 Swaminarayan University | All Rights Reserved.
+    </div>
+
+</footer>
+
+<script>
+const tabs = document.querySelectorAll('.program-tab');
+const contents = document.querySelectorAll('.program-content');
+
+tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+
+        // Remove active from all tabs
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+
+        // Hide all content
+        contents.forEach(content => content.classList.remove('active'));
+
+        // Show selected content
+        const selected = document.getElementById(tab.dataset.tab);
+        selected.classList.add('active');
+    });
+});
+</script>
+
+</body>
+</html>     

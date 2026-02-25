@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swaminarayan University | Home</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f2f5;
+            min-height: 100vh;
+        }
+
+        /* ---------------- NAVBAR ---------------- */
+        nav {
+            background: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 5%;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .logo img {
+            height: 90px;
+            width: 260px;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #475569;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #1e293b;
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+        }
+
+        .menu-link {
+            text-decoration: none;
+            color: #1e293b;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: 0.3s;
+        }
+
+        .menu-text {
+            font-size: 9px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin-bottom: -5px;
+        }
+
+        .menu-icon {
+            font-size: 30px;
+        }
+
+        .menu-link:hover {
+            color: #38bdf8;
+            transform: translateY(-2px);
+        }
+
+        
+        /* ---------------- HERO IMAGE SECTION ---------------- */
+
+     .hero-section {
+    width: 100%;
+    display: grid;
+    /* 4 columns on desktop */
+    grid-template-columns: repeat(4, 1fr); 
+    background: #000;
+    /* Increased height: now takes 85% of the screen height */
+    height: 85vh; 
+    min-height: 600px; /* Ensures it never feels "squashed" */
+    overflow: hidden;
+}
+
+.hero-box {
+    position: relative;
+    overflow: hidden;
+    height: 100%; /* Fill the 85vh height */
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid rgba(255,255,255,0.1); /* Subtle separator */
+}
+
+.hero-box:last-child {
+    border-right: none;
+}
+
+.hero-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Professional crop focusing on the subject */
+    object-position: top; /* Ensures faces are prioritized if the image is very tall */
+    transition: transform 0.8s cubic-bezier(0.2, 1, 0.3, 1);
+}
+
+/* Pro Hover Effect */
+.hero-box:hover img {
+    transform: scale(1.08);
+    filter: brightness(80%);
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 60px 20px 40px; /* Increased padding for a taller feel */
+    text-align: center;
+    color: white;
+    z-index: 2;
+    /* Richer gradient for a high-end look */
+    background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0) 100%);
+    transition: all 0.4s ease;
+}
+
+.overlay h2 {
+    font-size: 1.4rem; /* Larger, clearer headers */
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+}
+
+.overlay p {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #f59e0b; /* Using your Amber/Gold accent color */
+    letter-spacing: 1px;
+}
+        /* ================= FACULTIES SECTION ================= */
+
+        .faculties-section {
+            padding: 70px 5%;
+            background: #f8fafc;
+            text-align: center;
+        }
+
+        .faculties-section h2 {
+            font-size: 28px;
+            color: #1e293b;
+            margin-bottom: 40px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .faculties-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 30px;
+        }
+
+        .faculty-card {
+            background: white;
+            padding: 35px 20px;
+            border-radius: 20px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+        .faculty-card img {
+            width: 80px;
+            margin-bottom: 20px;
+        }
+
+        .faculty-card h3 {
+            font-size: 18px;
+            color: #334155;
+            font-weight: 600;
+        }
+
+        .faculty-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+        }
+
+  /* ================= OUR PROGRAMS SECTION ================= */
+
+.programs-section {
+    padding: 80px 5%;
+    background: #f1f3f6;
+    text-align: center;
+}
+
+.programs-title {
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #f59e0b;
+    margin-bottom: 40px;
+}
+
+.program-tabs {
+    display: flex;
+    justify-content: space-between;
+    background: #e5e7eb;
+    padding: 10px;
+    border-radius: 15px;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+}
+
+.program-tab {
+    flex: 1;
+    padding: 12px 0;
+    font-weight: 600;
+    color: #1f2937;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.program-tab.active {
+    background: #f59e0b;
+    color: white;
+}
+
+.program-tab:hover {
+    background: #fbbf24;
+    color: white;
+}
+
+/* PROGRAM CARDS */
+
+.program-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+}
+
+.program-card {
+    background: #e5e7eb;
+    padding: 50px 20px;
+    border-radius: 40px;
+    transition: 0.3s;
+}
+
+.program-card img {
+    width: 90px;
+    margin-bottom: 25px;
+}
+
+.program-card h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #1f2937;
+}
+
+.program-card:hover {
+    background: white;
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+.program-content {
+    display: none;
+    animation: fadeIn 0.4s ease;
+}
+
+.program-content.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+/* ================= FOOTER STYLE ================= */
+
+.university-footer {
+    background: #0b2d5c;
+    color: white;
+    padding: 60px 5% 20px;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+}
+
+.footer-logo {
+    width: 220px;
+    margin-bottom: 20px;
+}
+
+.footer-col h3 {
+    margin-bottom: 20px;
+    font-size: 20px;
+    position: relative;
+}
+
+.footer-col h3::after {
+    content: '';
+    width: 50px;
+    height: 3px;
+    background: orange;
+    display: block;
+    margin-top: 8px;
+}
+
+.footer-col ul {
+    list-style: none;
+}
+
+.footer-col ul li {
+    margin-bottom: 12px;
+}
+
+.footer-col ul li a {
+    text-decoration: none;
+    color: #d1d5db;
+    transition: 0.3s;
+}
+
+.footer-col ul li a:hover {
+    color: orange;
+    padding-left: 5px;
+}
+
+.contact-item {
+    margin-bottom: 15px;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.qr-code {
+    width: 180px;
+    border: 5px solid #1e3a8a;
+    border-radius: 15px;
+    margin-top: 15px;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 40px;
+    border-top: 1px solid rgba(255,255,255,0.2);
+    padding-top: 15px;
+    font-size: 14px;
+    color: #cbd5e1;
+}
+
+/* ---------------- PRO NAV & HERO GRID OPTIMIZATION ---------------- */
+
+/* Base Navbar Fixes */
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: white;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+}
+
+.logo img {
+    height: auto;
+    max-height: 80px; /* Limits size to prevent pushing nav height */
+    width: auto;
+    max-width: 240px;
+}
+
+/* 1. Laptop/Desktop Large (4 Columns) */
+.hero-section {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    background: #000;
+    height: 85vh;
+    min-height: 600px;
+    overflow: hidden;
+}
+
+/* 2. Tablet & Smaller Laptop (The 2x2 Proper Look) */
+@media (max-width: 1024px) {
+    nav {
+        height: 90px;
+        padding: 0 3%;
+    }
+
+    .logo img {
+        max-height: 60px;
+        max-width: 200px;
+    }
+
+    nav ul {
+        gap: 15px;
+    }
+
+    /* Hero switches to 2 columns here to prevent "thin strips" */
+    .hero-section {
+        grid-template-columns: repeat(2, 1fr);
+        height: auto; /* Grid items will now define the height */
+    }
+
+   .hero-box {
+       height: 50vh; /* Each row takes half the viewport height */  
+       min-height: 400px;
+       border-bottom: 1px solid rgba(255,255,255,0.1); 
+    } 
+}
+
+/* 3. Mobile Specific (768px and below) */
+@media (max-width: 768px) {
+    nav {
+        height: 80px;
+    }
+
+    /* Standard links hide into the toggle menu */
+    nav ul {
+        display: none; 
+        flex-direction: column;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background: white;
+        padding: 20px;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+        text-align: center; 
+    }
+
+    nav ul.active {
+        display: flex; 
+    }
+
+    .logo img {
+        max-height: 50px;
+    }
+
+    /* Hero switches to full-width stack for mobile */
+    .hero-section {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-box {
+        height: 70vh; /* Taller focus on mobile */
+    }
+}
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav>
+        <div class="logo">
+            <img src="university.png" alt="University Logo">
+        </div>
+
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Academics.html">Academics</a></li>
+            <li><a href="Contact_us.html">Contact</a></li>
+            <li><a href="#">Kalol</a></li>
+        </ul>
+
+        <div class="nav-right">
+            <a href="dashboard.html" class="menu-link">
+                <span class="menu-text">Menu</span>
+                <span class="menu-icon">&#9776;</span>
+            </a>
+        </div>
+    </nav>
+
+    <!-- FULL WIDTH IMAGE ROW -->
+    <main class="hero-section">
+
+        <div class="hero-box">
+            <img src="president_ssvg.jpg" alt="President">
+            <div class="overlay">
+                <h2>President</h2>
+                <p>Swaminarayan University</p>
+            </div>
+        </div>
+
+        <div class="hero-box">
+            <img src="vc_ssvg.jpg" alt="Vice Chancellor">
+            <div class="overlay">
+                <h2>Vice Chancellor</h2>
+                <p>Academic Leadership</p>
+            </div>
+        </div>
+
+        <div class="hero-box">
+            <img src="vicepresident_ssvg.jpg" alt="Vice President">
+            <div class="overlay">
+                <h2>Vice President</h2>
+                <p>Administration</p>
+            </div>
+        </div>
+
+        <div class="hero-box">
+            <img src="swami.jpg" alt="Founder">
+            <div class="overlay">
+                <h2>Founder</h2>
+                <p>Spiritual Inspiration</p>
+            </div>
+        </div>
+
+        
+
+    </main>
+    <!-- ================= FACULTIES ================= -->
+<section class="faculties-section">
+
+    <h2>Our Skilled Faculties</h2>
+
+    <div class="faculties-container">
+
+        <div class="faculty-card">
+            <img src="engineering.png" alt="Engineering">
+            <h3>Faculty of Engineering</h3>
+        </div>
+
+        <div class="faculty-card">
+            <img src="commerce.png" alt="Commerce">
+            <h3>Faculty of Commerce and Management</h3>
+        </div>
+
+        <div class="faculty-card">
+            <img src="law.png" alt="Law">
+            <h3>Faculty of Law</h3>
+        </div>
+
+        <div class="faculty-card">
+            <img src="it.png" alt="IT">
+            <h3>Faculty of IT & Computer Science</h3>
+        </div>
+
+        <div class="faculty-card">
+            <img src="pharmacy.png" alt="Pharmacy">
+            <h3>Faculty of Pharmacy</h3>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= OUR PROGRAMS ================= -->
+<section class="programs-section">
+
+    <h2 class="programs-title">OUR PROGRAMS</h2>
+
+    <div class="program-tabs">
+        <div class="program-tab active" data-tab="diploma">Diploma</div>
+        <div class="program-tab" data-tab="ug">Undergraduate</div>
+        <div class="program-tab" data-tab="pg">Postgraduate</div>
+        <div class="program-tab" data-tab="certificate">Certificate</div>
+        <div class="program-tab" data-tab="phd">Ph.D.</div>
+    </div>
+
+    <!-- PROGRAM CONTENT -->
+    <div class="program-content active" id="diploma">
+        <div class="program-container">
+            <div class="program-card">
+                <img src="diploma1.png">
+                <h3>Diploma in Engineering</h3>
+            </div>
+            <div class="program-card">
+                <img src="diploma2.png">
+                <h3>Diploma in Pharmacy</h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="program-content" id="ug">
+        <div class="program-container">
+            <div class="program-card">
+                <img src="ug1.png">
+                <h3>B.Tech</h3>
+            </div>
+            <div class="program-card">
+                <img src="ug2.png">
+                <h3>BBA</h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="program-content" id="pg">
+        <div class="program-container">
+            <div class="program-card">
+                <img src="pg1.png">
+                <h3>M.Tech</h3>
+            </div>
+            <div class="program-card">
+                <img src="pg2.png">
+                <h3>MBA</h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="program-content" id="certificate">
+        <div class="program-container">
+            <div class="program-card">
+                <img src="therapy.png">
+                <h3>Panchkarma Therapist</h3>
+            </div>
+            <div class="program-card">
+                <img src="yoga.png">
+                <h3>Yoga</h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="program-content" id="phd">
+        <div class="program-container">
+            <div class="program-card">
+                <img src="phd1.png">
+                <h3>Ph.D. in Engineering</h3>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+   <!-- ================= FOOTER ================= -->
+<footer class="university-footer">
+
+    <div class="footer-container">
+
+        <!-- COLUMN 1 : LOGO + CONTACT -->
+        <div class="footer-col">
+            <img src="university.png" class="footer-logo" alt="University Logo">
+
+            <div class="contact-item">
+                📞 +91-63576 75561/2/3,18002037800
+            </div>
+
+            <div class="contact-item">
+                📍 Shree Swaminarayan Vishwamangal Gurukul,<br>
+                Ahmedabad-Mehsana Highway, At & Po-Saij,<br>
+                Kalol, Dist. Gandhinagar - 382725, Gujarat
+            </div>
+
+            <div class="contact-item">
+                ✉ info@swaminarayanuniversity.ac.in
+            </div>
+        </div>
+
+        <!-- COLUMN 2 : QUICK LINKS -->
+        <div class="footer-col">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">FAQ's</a></li>
+                <li><a href="#">Testimonials</a></li>
+                <li><a href="#">Terms Of Service</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Update News</a></li>
+            </ul>
+        </div>
+
+        <!-- COLUMN 3 : CAMPUS -->
+        <div class="footer-col">
+            <h3>Our Campus</h3>
+            <ul>
+                <li><a href="#">Campus Safety</a></li>
+                <li><a href="#">Student Activities</a></li>
+                <li><a href="#">Academic Department</a></li>
+                <li><a href="#">Planning & Administration</a></li>
+                <li><a href="#">Office Of The Chancellor</a></li>
+                <li><a href="#">Facility Services</a></li>
+            </ul>
+        </div>
+
+        <!-- COLUMN 4 : ADMISSION -->
+        <div class="footer-col">
+            <h3>Admission Enquiry</h3>
+            <p>Scan the QR Code for Admission Enquiry</p>
+            <img src="qr.png" class="qr-code" alt="QR Code">
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        © 2026 Swaminarayan University | All Rights Reserved.
+    </div>
+
+</footer>
+
+<script>
+const tabs = document.querySelectorAll('.program-tab');
+const contents = document.querySelectorAll('.program-content');
+
+tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+
+        // Remove active from all tabs
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+
+        // Hide all content
+        contents.forEach(content => content.classList.remove('active'));
+
+        // Show selected content
+        const selected = document.getElementById(tab.dataset.tab);
+        selected.classList.add('active');
+    });
+});
+</script>
+
+</body>
+</html>     
